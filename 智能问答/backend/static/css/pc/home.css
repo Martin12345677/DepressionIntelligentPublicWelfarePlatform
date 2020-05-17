@@ -1,0 +1,174 @@
+        body {
+            overflow: hidden;
+            background-image: url("../../image/bg.jfif");
+            background-size: cover;
+        }
+        .left-part{
+            position: absolute;
+            width: 28%;
+            height: fit-content;
+            max-width: 450px;
+            min-height: 200px;
+            min-width: 400px;
+            background-color: rgba(116, 116, 116, 0.521);
+            top: 150px;
+            left: 50px;
+            border-radius: 20px;
+            color: antiquewhite;
+            text-align: center;
+            font-size: 23px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .left-part>label{
+            display: inline;
+        }
+        .big-title{
+            font-size: 40px;
+            padding-top: 10px;
+        }
+        .little-title {
+            cursor: pointer;
+        }
+        form{
+            margin-top: 10px;
+            position: relative;
+        }
+        form > div {
+            position: relative;
+        }
+        input, select{
+            float: right;
+            height: 25px;
+            width: 70%;
+            background-color: rgba(255, 255, 255, 0.6);
+            border: none;
+            border-radius: 4px;
+            color: rgb(92, 92, 92);
+            margin-bottom: 5px;
+            margin-top: 5px;
+            display: block;
+            box-sizing: border-box;
+        }
+
+        .verify-btn {
+            display: none;
+            position: absolute;
+            right: 3px;
+            top: 0;
+            font-size: 15px;
+            line-height: 35px;
+            color: #1a4a4a;
+            cursor: pointer;
+        }
+
+        .form label{
+            font-size: 17px;
+            box-sizing: border-box;
+            font-weight: bold;
+            display: block;
+            float: left;
+            line-height: 35px;
+            width: 27%;
+        }
+        .err-message, .success-message{
+            float: left;
+            width: 100%;
+            margin-bottom: 5px;
+            font-size: 17px;
+            color: red;
+        }
+        .success-message{
+            color: #00ff14;
+        }
+
+        .submit{
+            width: 30%;
+            height: 40px;
+            font-size: 25px;
+            transition: ease 0.4s;
+            display: block;
+            margin-right: 35%;
+            margin-top: 10px;
+        }
+        .submit:hover{
+            background-color: rgba(109, 109, 109, 0.966);
+            color: white;
+        }
+
+        .menu-part{
+            position: absolute;
+        }
+        .menu-part div{
+            position: absolute;
+            width: 10vw;
+            height: 10vw;
+            transition: ease-in-out 0.2s;
+        }
+        .menu-part div:hover{
+            width: 12vw;
+            height: 12vw;
+        }
+        .menu1{
+            background-image: url('../../image/我的世界.png');
+            background-size: 100%;
+            left: 52vw;
+            top: 18vw;
+            animation: move1 14s infinite;
+        }
+        @keyframes move1 {
+            33% {
+                left: 35vw;
+                top: 13vw;
+            }
+            66% {
+                left: 69vw;
+                top: 9vw;
+            }
+            100% {
+                left: 52vw;
+                top: 18vw;
+            }
+        }
+        .menu2{
+            background-image: url('../../image/心理评估.png');
+            background-size: 100%;
+            left: 35vw;
+            top: 13vw;
+            animation: move2 14s infinite;
+        }
+        @keyframes move2 {
+            33% {
+                left: 69vw;
+                top: 9vw;
+            }
+            66% {
+                left: 52vw;
+                top: 18vw;
+            }
+            100% {
+                left: 35vw;
+                top: 13vw;
+            }
+        }
+        .menu3{
+            background-image: url('../../image/智能问答.png');
+            background-size: 100%;
+            left: 69vw;
+            top: 9vw;
+            animation: move3 14s infinite;
+        }
+        @keyframes move3 {
+            33% {
+                left: 52vw;
+                top: 18vw;
+            }
+            66% {
+                left: 35vw;
+                top: 13vw;
+            }
+            100% {
+                left: 69vw;
+                top: 9vw;
+            }
+        }

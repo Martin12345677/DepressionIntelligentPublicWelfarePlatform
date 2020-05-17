@@ -1,0 +1,45 @@
+{% extends 'depress/test_tem.html' %}
+{% load static %}
+
+{% block link_test %}
+    <link rel="stylesheet" media="screen and (min-device-width: 800px)" href="{% static 'css/pc/xlpg.css' %}">
+    <link rel="stylesheet" media="screen and (max-device-width: 800px)" href="{% static 'css/phone/xlpg.css' %}">
+{% endblock %}
+
+{% block body_test %}
+        <div class="mine-part">
+            <div class="mine-title">
+                我的测评
+            </div>
+            {% if my_tests_length == 0 %}
+            <div class="mine-title">
+                您还没有参加过评估，快选择一个进行评估吧~
+            </div>
+            {% endif %}
+            {% for t in my_tests %}
+{#            <div class="mine-test {% if t.level < 0.3 %}terrible{% elif t.level < 0.7 %}middle{% else %}good{% endif %}">#}
+            <div class="mine-test">
+                <span onclick="getDetails({{ t.tid }}, '{{ t.time }}')" class="mine-test-name">
+                    {{ t.name }}
+                </span>
+                <div class="mine-test-time">
+                    {{ t.time }}
+                </div>
+                <div class="mine-test-score">
+                    {{ t.score }}分:
+                </div>
+                <div class="mine-test-comment">
+                    {{ t.comment }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    <script>
+        function getDetails(tid, time) {
+            time = time.replace('年', '_').replace('月', '_').replace('日', '');
+            console.log(time);
+            window.location.href = '/depress/test_result?tid=' + tid + '&&time=' + time;
+        }
+    </script>
+
+{% endblock %}

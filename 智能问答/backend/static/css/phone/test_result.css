@@ -1,0 +1,40 @@
+.result-body {
+    width: 100%;
+    text-align: center;
+}
+.score-part {
+    margin-top: 90px;
+    font-size: 45px;
+}
+.score-number > span {
+    font-size: 70px;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+}
+.score-comment {
+    text-align: left;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+.score-comment > div {
+    text-align: left;
+    margin-top: 40px;
+}
+.result-body a {
+    display: inline;
+    color: #a46f48;
+    font-size: 37px;
+    margin-top: 40px;
+}
+.highcharts-credits {
+    display: none;
+}
+
+#chart {
+    min-height: 600px;
+}
+.highcharts-legend-item {
+    display: none;
+}

@@ -1,0 +1,23 @@
+{% extends 'depress/base.html' %}
+{% load static %}
+
+{% block link %}
+    <link rel="stylesheet" media="screen and (min-device-width: 800px)" href="{% static 'css/pc/xgzl.css' %}">
+    <link rel="stylesheet" media="screen and (max-device-width: 800px)" href="{% static 'css/phone/xgzl.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="main-part">
+        <div class="big-title">修改资料</div>
+        <form action="/depress/xgzl" method="post">
+            <div class="form">
+                {{ form }}
+            </div>
+            {% for err in err_msg %}
+                <div class="err-message">{{ err.0 }}</div>
+            {% endfor %}
+            <div class="success-message err-message">{{ suc_msg }}</div>
+            <input type="submit" value="提交" class="submit">
+        </form>
+    </div>
+{% endblock %}

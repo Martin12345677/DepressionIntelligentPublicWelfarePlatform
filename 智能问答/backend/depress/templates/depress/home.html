@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="view-port" content="width=device-width;initial-scale=1.0">
+    <title>抑郁症智能公益平台</title>
+    <link rel="stylesheet" href="{% static 'css/pc/home.css' %}" media="screen and (min-device-width: 800px)"/>
+    <link rel="stylesheet" href="{% static 'css/phone/home.css' %}" media="screen and (max-device-width: 800px)"/>
+
+    <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+
+</head>
+<body>
+    <div class="left-part">
+        <label class="big-title">{% if mode == 1 %}登录{% else %}注册{% endif %}</label>/<label class="little-title" onclick="change()">{% if mode == -1 %}登录{% else %}注册{% endif %}</label>
+        <form action="{% if mode == 1 %}/depress/login{% else %}/depress/signup{% endif %}" method="POST">
+            <div class="form">
+                {{ form }}
+            </div>
+            {% if mode == -1 %}
+                <div class="form">
+                    <div>
+                        <label for="id_email">邮箱:</label>
+                        <input type="email" name="email" id="id_email" required="" onkeyup="email_change(this.value)">
+                        <div class="verify-btn" onclick="send_verify()">获取验证码</div>
+                    </div>
+                    <div>
+                        <label for="id_verify">验证码:</label>
+                        <input type="text" name="verify" maxlength="20" id="id_verify" required="" minlength="4" maxlength="4">
+                    </div>
+                    <div>
+                        <label for="id_name">用户名:</label>
+                        <input type="text" name="name" maxlength="20" id="id_name" required="" minlength="5">
+                    </div>
+                    <div>
+                        <label for="id_password1">密码:</label>
+                        <input type="password" name="password1" maxlength="20" id="id_password1" required="" minlength="6">
+                    </div>
+                    <div>
+                        <label for="id_password2">确认密码:</label>
+                        <input type="password" name="password2" maxlength="20" id="id_password2" required="" minlength="6">
+                    </div>
+                </div>
+            {% endif %}
+            {% for err in err_msg %}
+                <div class="err-message">{{ err.0 }}</div>
+            {% endfor %}
+            <div class="err-message"></div>
+            <div class="success-message">{{ suc_msg }}</div>
+            <input type="submit" value="{% if mode == 1 %}登录{% else %}注册{% endif %}" class="submit">
+        </form>
+
+    </div>
+    <div class="menu-part">
+        <div class="menu1" onclick="alert('请先登录/注册');"></div>
+        <div class="menu2" onclick="alert('请先登录/注册');"></div>
+        <div class="menu3" onclick="alert('请先登录/注册');"></div>
+    </div>
+</body>
+
+<script >
+    var emailExp = /.+@.+\.com/;
+    var btn = $('.verify-btn');
+    function change() {
+        var label = document.getElementsByClassName('big-title')[0];
+        var mode = -1;
+        if(label.innerText === '登录'){
+            mode = -1;
+        }else{
+            mode = 1;
+        }
+        window.location.href = '/depress/change_mode?mode=' + mode;
+    }
+    function send_verify() {
+        if(btn.text() == '已发送') return;
+        var email = $('#id_email').val();
+        $.post('/depress/sendVerify', {
+            email: email
+        }, function (res) {
+            res = JSON.parse(res);
+            if (res.code === 200) {
+                btn.text('已发送');
+            }
+            else if (res.code === 400) {
+                $('.err-message').text('该邮箱已被注册！');
+            }
+            else {
+                $('.err-message').text('系统繁忙，请稍后再试。');
+            }
+        });
+    }
+    function email_change(email) {
+        if(emailExp.test(email)) {
+            btn.css('display', 'block');
+        } else {
+            btn.css('display', 'none');
+        }
+    }
+</script>
+</html>

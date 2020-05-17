@@ -1,0 +1,230 @@
+{% extends 'depress/base.html' %}
+{% load static %}
+{% block link %}
+ <link rel="stylesheet" media="screen and (min-device-width:800px)" href="{% static 'css/pc/znwd.css' %}">
+ <link rel="stylesheet" media="screen and (max-device-width:800px)" href="{% static 'css/phone/znwd.css' %}">
+{% endblock %}
+{% block body %}
+{#{% block css %}#}
+{#{% endblock %}#}
+{#{% block body %}#}
+    <div class="dialog-part">
+        <div class="msg-part">
+            <div class="history-btn" onclick="load()" >
+                查看历史消息
+            </div>
+            <div class="load-icon"></div>
+        </div>
+        <div id="end"></div>
+        <div class="input-part">
+            <input type="text" maxlength="200" onkeydown="enter(event)">
+            <button type="button" onclick="send()">发送</button>
+        </div>
+    </div>
+{#{% endblock %}#}
+{#{% block js %}#}
+    <script>
+    var email = '{{ email|safe }}';
+    var time = new Date();
+    var m = time.getMonth() + 1;
+    time = time.getFullYear() + "-" + m + "-"
+        + time.getDate() + " " + time.getHours() + ":"
+        + time.getMinutes() + ":" + time.getSeconds();
+    var msgs = [];
+
+
+    var input = $('.input-part input');
+
+    function load() {
+        $('.load-icon').css('display', 'block');
+        $('.history-btn').css('display', 'none');
+        setTimeout(loadDom, 10);
+    }
+
+    function loadDom() {
+        return new Promise((resolve, reject) => {
+            var frag = document.createDocumentFragment();
+            if (localStorage.getItem(email)) {
+                var localMags = getLocalMsgs();
+                msgs = localMags.msgs;
+                for(var i = 0; i < msgs.length; i++){
+                    if(i === 0){
+                        addMsg(msgs[i], null, true, frag);
+                    }else{
+                        addMsg(msgs[i], msgs[i-1].time, true, frag);
+                    }
+                }
+                resolve(frag);
+            } else {
+                $.ajax({
+                    url: '/depress/getHistory',
+                    type: 'GET',
+                    data: {
+                        email: email
+                    },
+                    dataType: 'json',
+                    success: function (data, status) {
+                        msgs = data.msgs;
+                        setMsgs();
+                        for (var i = 0; i < msgs.length; i++) {
+                            if (i === 0) {
+                                addMsg(msgs[i], null, true, frag);
+                            } else {
+                                addMsg(msgs[i], msgs[i - 1].time, true, frag);
+                            }
+                        }
+                        resolve(frag);
+                    },
+                    fail: err => reject(err)
+                })
+            }
+        }).then(data => {
+            $('.msg-div').remove();
+            document.getElementsByClassName('msg-part')[0].append(data);
+            $('.load-icon').css('display', 'none');
+            window.location.href = '#end';
+        }).catch(err => console.log(err));
+    }
+
+    function addMsg(msg, lasttime, load, frag) {
+        lasttime = lasttime || '0-0-0 0:0:0';
+        load = load || false;
+        var time = makeTime(msg.time);
+        lasttime = makeTime(lasttime);
+        var check = ['year', 'month', 'day', 'hour'];
+        var isShow = false;
+        for(var i = 0; i < 4; i++){
+            if(time[check[i]] != lasttime[check[i]]){
+                isShow = true;
+                if(i === 0){
+                    time = msg.time;
+                }else if(i <= 2){
+                    time = time.month + '月' + time.day + '日' + time.hour + ':' + time.min + ':' + time.sec;
+                }else{
+                    time = time.hour + ':' + time.min + ':' + time.sec;
+                }
+                break;
+            }
+        }
+        if(!isShow && time.min - lasttime.min > 3){
+            isShow = true;
+            time = time.hour + ':' + time.min + ':' + time.sec;
+        }
+        var part = frag || document.getElementsByClassName('msg-part')[0];
+        console.log(part);
+        var div = document.createElement('div');
+        div.className = 'msg-div msg-div-' + (msg.send? 'right' : 'left');
+        if(isShow){
+            var time_div = document.createElement('div');
+            time_div.textContent = time;
+            time_div.className = 'msg-time';
+            div.appendChild(time_div);
+        }
+        var text_div = document.createElement('div');
+        text_div.textContent = msg.text;
+        text_div.className = 'msg-text-' + (msg.send? 'right' : 'left');
+        div.appendChild(text_div);
+        if(!msg.send){
+            var icon_div = document.createElement('div');
+            icon_div.className = 'msg-icon';
+            div.appendChild(icon_div);
+        }
+        part.appendChild(div);
+        if(!load){
+            msgs.push(msg);
+            addLocalMsg(msg);
+            window.location.href = '#end';
+        }
+    }
+
+    function makeTime(time) {
+        time = time.split(' ')
+        var date = time[0].split('-')
+        time = time[1].split(':')
+        return {
+            year: Number(date[0]),
+            month: Number(date[1]),
+            day: Number(date[2]),
+            hour: Number(time[0]),
+            min: Number(time[1]),
+            sec: Number(time[2])
+        }
+    }
+
+    function enter(e) {
+        if (e.key === 'Enter') {
+            send();
+        }
+    }
+
+    function send() {
+        var sentence = input.val()
+        if(sentence === ''){
+            return
+        }
+        document.getElementsByTagName('input')[0].value = '';
+        var time = new Date();
+        var m = time.getMonth() + 1;
+        time = time.getFullYear() + "-" + m + "-"
+        + time.getDate() + " " + time.getHours() + ":"
+        + time.getMinutes() + ":" + time.getSeconds();
+        var msg = {
+            time: time,
+            text: sentence,
+            send: true
+        };
+        if(msgs.length === 0){
+            addMsg(msg);
+        }else{
+            addMsg(msg, msgs[msgs.length-1].time);
+        }
+        $.ajax({
+            url: '/depress/getReply',
+            type: 'POST',
+            data: {
+                sentence: sentence,
+                email: email,
+                time: time
+            },
+            dataType: 'json',
+            success: function (data, status) {
+                var reply = data.msg;
+                console.log(reply);
+                if(msgs.length === 0){
+                    addMsg(reply);
+                }else{
+                    addMsg(reply, msgs[msgs.length-1].time);
+                }
+                input.focus();
+            }
+        })
+        input.focus();
+    }
+
+    function setMsgs() {
+        var localMsgs = {
+            'msgs': msgs
+        };
+        localStorage.setItem(email, JSON.stringify(localMsgs));
+    }
+
+    function getLocalMsgs() {
+        var localMsgs = localStorage.getItem(email);
+        return localMsgs ? JSON.parse(localMsgs) : null;
+    }
+
+    function addLocalMsg(msg) {
+        var localMsgs = getLocalMsgs();
+        if (localMsgs) {
+            localMsgs.msgs.push(msg);
+            console.log(localMsgs)
+            localStorage.setItem(email, JSON.stringify(localMsgs));
+        } else {
+            localMsgs = {
+                'msgs': [msg]
+            };
+            localStorage.setItem(email, JSON.stringify(localMsgs));
+        }
+    }
+    </script>
+{% endblock %}

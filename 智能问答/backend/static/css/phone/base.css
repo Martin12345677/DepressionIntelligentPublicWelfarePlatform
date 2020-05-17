@@ -1,0 +1,74 @@
+
+        body{
+            height: 100vh;
+            background-image: url("../../image/bg.jfif");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            width: 100%;
+            width: 100vw;
+            overflow-x: hidden;
+        }
+        .child-page {
+            transition: all ease 0.5s;
+        }
+        .move-child {
+            transform: translateX(40%);
+        }
+        /*{#        菜单部分#}*/
+        .menu-part{
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 120px;
+            display: inline;
+            z-index: 5;
+        }
+        .left-menu {
+            position: fixed;
+            box-sizing: border-box;
+            left: 0;
+            top: 0;
+            width: 40%;
+            height: 100vh;
+            background-color: rgb(207, 199, 199);
+            font-size: 45px;
+            transition: all ease 0.5s;
+            text-align: center;
+            padding-top: 290px;
+        }
+
+        .hide-left {
+            transform: translateX(-100%);
+        }
+        .menu-part label {
+            display: block;
+            font-size: 50px;
+            padding: 20px;
+            box-sizing: border-box;
+            word-spacing: 10px;
+        }
+        .menu-part label:hover{
+            color: white;
+            transition: ease 0.5s;
+            background-color: #1a4a4a;
+        }
+        .name {
+            position: absolute;
+            width: 100%;
+            word-break: break-all;
+            top: 105px;
+            left: 10px;
+            font-size: 50px;
+        }
+        .menu-part .logo{
+            position: fixed;
+            background-image: url("../../image/menu.png");
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+            top: 10px;
+            left: 20px;
+            z-index: 6;
+        }
+

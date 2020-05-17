@@ -1,0 +1,32 @@
+
+        .mine-part {
+            width: 100%;
+            text-align: center;
+        }
+        .mine-title {
+            font-size: 60px;
+            font-weight: bold;
+            text-align: center;
+            margin: 40px;
+        }
+        .mine-test {
+            position: relative;
+            margin: auto;
+            padding-left: 16px;
+            text-align: left;
+            width: 100%;
+            line-height: 80px;
+        }
+        .mine-test-name {
+            font-size: 40px;
+            cursor: pointer;
+        }
+        .mine-test-time {
+            font-size: 35px;
+            float: right;
+            margin-right: 10px;
+        }
+        .mine-test-score, .mine-test-comment {
+            display: none;
+        }
+

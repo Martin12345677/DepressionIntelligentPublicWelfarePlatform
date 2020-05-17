@@ -1,0 +1,743 @@
+  <div id="anchor"></div>
+  
+  
+  
+<body>
+
+<script>"use strict";var Dpr=1,uAgent=window.navigator.userAgent;var isIOS=uAgent.match(/iphone/i);var isYIXIN=uAgent.match(/yixin/i);var is2345=uAgent.match(/Mb2345/i);var ishaosou=uAgent.match(/mso_app/i);var isSogou=uAgent.match(/sogoumobilebrowser/gi);var isLiebao=uAgent.match(/liebaofast/i);var isGnbr=uAgent.match(/GNBR/i);var $fixed=document.getElementById("fixed");function resizeRoot(){var e=screen.width>0?window.innerWidth>=screen.width||window.innerWidth==0?screen.width:window.innerWidth:window.innerWidth,i,n;var t=screen.height>0?window.innerHeight>=screen.height||window.innerHeight==0?screen.height:window.innerHeight:window.innerHeight;if(window.devicePixelRatio){i=window.devicePixelRatio}else{i=isIOS?e>818?3:e>480?2:1:1}if(isIOS){e=screen.width;t=screen.height}if(e>t){e=t}n=e>1080?144:e/7.5;n=n>32?n:32;window.screenWidth_=e;if(isYIXIN||is2345||ishaosou||isSogou||isLiebao||isGnbr){setTimeout(function(){e=screen.width>0?window.innerWidth>=screen.width||window.innerWidth==0?screen.width:window.innerWidth:window.innerWidth;t=screen.height>0?window.innerHeight>=screen.height||window.innerHeight==0?screen.height:window.innerHeight:window.innerHeight;n=e>1080?144:e/7.5;n=n>32?n:32;document.getElementsByTagName("html")[0].style.fontSize=n+"px";if($fixed){$fixed.style.display="none"}},500)}else{document.getElementsByTagName("html")[0].style.fontSize=n+"px";if($fixed){$fixed.style.display="none"}}}resizeRoot();var reviseViewPort=function(e,i){var n=e||200,t=0,r=i||5;var o=setInterval(function(){var e=screen.width>0?window.innerWidth>=screen.width?screen.width:window.innerWidth:window.innerWidth,i;if(e<window.screenWidth_){window.screenWidth_=e;i=e>1080?144:e/7.5;i=i>32?i:32;document.getElementsByTagName("html")[0].style.fontSize=i+"px";clearInterval(o)}else{t++}if(t>=r){clearInterval(o)}},n)};reviseViewPort(200);</script>
+
+<div style="margin:0 auto; display:none;"><img src="http://a2.att.hudong.com/84/47/20300001255202132229474840853_s.jpg"></div>
+<div class="wrapper word-wrapper" id="float_hight">
+<header class="fixed-top" id="header-word"><div id="hd_ad_doc_118" class="ad_xuanban"> </div>
+
+
+
+	
+
+
+<link rel="stylesheet" href="//www.huimg.cn/xiniulwl/css/swiper.min.css">
+<script src="//www.huimg.cn/xiniulwl/js/background/swiper.min.js"></script>
+<!--下线顶部的深度链接样式 by zhoukunjiang 2018-11-8 start-->
+<!--<style>-->
+<!--.word-wrapper{padding-top:119px;}-->
+<!--.hd_ad_app .open-app {display:block;width: 1.4rem;height:0.64rem;line-height:0.64rem;box-sizing:border-box;margin-top: 0.1rem;border-radius:2px;}-->
+<!--.hd-adv-2 .open-app {position:absolute;right:0;top:0;}-->
+<!--.hd_ad_app  a {min-height:0.82rem;}.hd_ad_app  img{margin-top: 0.06rem;}-->
+<!--.hd-adv-2   img{margin-top: 0px;}.hd_ad_app .app-close {top: .37rem;}-->
+<!--.hd-adv-2  a {position:relative;padding:0 1.64rem 0 1.46rem;}-->
+<!--.hd_ad_app .hd-adv-word{padding:0.1rem 0 0;display:block;font-size:0.24rem;line-height:0.32rem;color:#000;overflow : hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}-->
+<!--.hd-adv-2 .hd-adv-img{position:absolute;left:0;display: block;width:1.32rem;height:0.82rem;overflow:hidden;}.hd-adv-2 .hd-adv-img img{display: block;width:100%;min-height:100%;}-->
+<!--.swiper-container-horizontal>.swiper-pagination .swiper-pagination-bullet {margin: 0 0.06rem;}.swiper-pagination .swiper-pagination-bullet {width: .1rem;height: .1rem;border-radius: 100%;background-color: #b8b8b8;opacity: 1;transition: width 100ms;}.swiper-pagination .swiper-pagination-bullet-active {background-color: #FE7300;width: .18rem;border-radius:5px !important;}.swiper-container-horizontal>.swiper-pagination {bottom: 1px;}-->
+<!--</style>-->
+<!--下线顶部的深度链接样式 by zhoukunjiang 2018-11-8 start-->
+		<!--下线顶部的深度链接 by zhoukunjiang 2018-11-6 start-->
+		<!--<div class="swiper-container" id="hd-adv">-->
+        <!--<div class="swiper-wrapper" id="baseDiv">-->
+
+        <!--</div>-->
+        <!-- Add Pagination -->
+        <!--<div class="swiper-pagination swiper-pagination-adv"></div>-->
+    <!--</div>-->
+    <!--下线顶部的深度链接 by zhoukunjiang 2018-11-6 end-->
+
+<script type="text/javascript">
+	 var hdswiper = new Swiper('#hd-adv', {
+        pagination: '.swiper-pagination-adv',
+        paginationClickable: true,
+        autoplay : 5000,
+        autoplayDisableOnInteraction : false,
+        spaceBetween: 0,
+        observer:true,
+
+    });
+</script>
+
+ 
+	<div class="header-word">
+<p id="wap_login_user"></p>
+<h3 class="bklogo"><img alt="手机互动百科网" src="//www.huimg.cn/public/images/a-baikelogo.gif" width="100px"></h3>
+    	
+   		 <div class="inp_txt">
+   		 	<a href="javascript:;" id="top_search_ipt" onclick="document.getElementById('search_autocomplete').style.display='block';" class="icon-sousuo"></a>
+   		 </div>
+    	 <div class="head_r"><!--<span class="btn_menu" onclick="btn_menu()"></span>--></div>
+		
+    </div>
+	
+	<nav class="nav-word" style="display: none;" id="sitenavi">
+     <h4>频道导航</h4>
+        <ul class="home-navi">
+          <li><a id="ijiemi"><i class="irwl"></i>百科解密</a></li>
+		  <li><img src="//huimg.cn/wap/baike-fm/images/dot-hot.png" style="height:3.3vw;position:absolute;margin:-5px 0 0 57px;animation:hot-gif 500ms linear infinite;">
+			  <a id="ibaikefm">
+			     <img src="//huimg.cn/wap/baike-fm/images/nav-fmicon.png" style="width:40px;height:40px;margin:0 auto 5px auto;">百科FM
+			  </a>
+			  <style>@keyframes hot-gif{0%{transform:translateY(0);}50%{transform:translateY(30%);}100%{transform:translateY(0);}}</style>
+		  </li>
+        <!--  <li><a id="ifocus"><i class="ifocus"></i>焦点</a>
+          </li>
+          <li><a id="ikexue"><i class="ikexue"></i>科学+</a>
+          </li> -->
+          <li><a id="iindoc"><i class="iindoc"></i>IN词</a>
+          </li>
+          <li><a id="ipic"><i class="ipic"></i>图片</a>
+          </li>
+          <li><a id="ikexue"><i class="ikexue"></i>热词</a>
+          </li>
+        </ul>
+  	</nav>
+  	
+
+  	
+
+<div class="pop-speech" style="display:none;">
+	<span class="command">
+		<i class="iplay" style="display: none;"></i>
+		<i class="ipause"></i>
+		<i class="istop"></i>
+		<i class="iclose"></i>
+	</span>
+	<i class="ispeech2 play"></i><span>正在收听百科..</span>
+</div>
+
+</header>
+
+<em class="fixed_bg" id="fbg" style="display:none;" onclick="document.getElementById('fbg').style.display='none';document.getElementById('chain-con').style.display='none';document.getElementById('chain-con').style.display='none';document.getElementById('sitenavi').style.display='none';document.getElementById('feadback-con').style.display='none';document.getElementById('share-con').style.display='none';document.getElementById('comment-con').style.display='none';document.getElementById('header-word').style.zIndex='4';canScroll=1;"></em>
+
+
+
+
+<div class="fixed-rb" style="z-index:4;" id="handDiv">
+	<div id="hd_ad_doc_83"><text> </text></div>
+	
+
+    <span class="btn_note"></span>
+	<span id="btn-catalogue" class="btn_menu"></span>
+	<i class="ico-share2" onclick="share(this)"></i>
+	<em id="to_top" class="to-top" style="display:none;"></em>
+ </div>
+
+
+
+
+<div class="fixed_bg" id="word_menu_bg" style="display:none;" onclick="document.getElementById('word_menu_bg').style.display='none';document.getElementById('catalogue').style.display='none';document.getElementById('sitenavi').style.display='none';canScroll=1;"></div>
+
+
+
+
+<input type="hidden" name="hdAdBizId" id="hdAdBizId" value="%E3%80%8A%E7%88%B1%E4%B8%8E%E6%81%A8%EF%BC%9A%E6%83%85%E7%BB%AA%E5%BF%83%E7%90%86%E7%9A%84%E6%99%BA%E6%85%A7%E3%80%8B"><input type="hidden" name="widgetBizId" id="widgetBizId" value="《爱与恨：情绪心理的智慧》"><center><div id="hd_ad_doc_72" class="ad_xuanban" style="background: rgb(204, 204, 204);"> </div></center>
+<div class="word_info">
+<div class="wrap">
+<div id="unifyprompt" class="prompt" style="display:none"> </div>
+<input type="hidden" id="appFromUrlId" value=""><div class="word-top">
+<figure class="zyimg"><a href="#" alt="" onclick="document.getElementById('img-view').style.display='block';"><img src="http://a2.att.hudong.com/84/47/20300001255202132229474840853_s.jpg"><em id="albumLength"></em></a></figure><div class="baiketitl">
+<h1 id="alllink_title">《爱与恨：情绪心理的智慧》</h1>
+					<i class="ispeech" style="display:none;"><span class="btnSound" uuid="945777B230EFD62ADC59887AE92351C8" soundurl="//a8.baike.com/94/57/945777B230EFD62ADC59887AE92351C8/97EB36DC7FA3D1D960CC59BB86A51296.mp3?title=《爱与恨：情绪心理的智慧》"></span></i>
+				<input type="hidden" id="ttsCount" value="3">
+</div>
+</div>
+	<div class="polysemy" id="polysemyAll">
+	  
+	</div>
+
+	<div class="zy clearfix" id="custom_zy">
+<div id="hd_ad_doc_117" class="ad_xuanban"> </div>
+<p></p><p>《爱与恨：情绪心理的智慧》是心理咨询与教育辅导专家徐光兴创作的心理学图书，由安徽人民出版社于2011年3月出版。本书介绍了如何调节自己的情绪，如何设身处地为他人着想，如何感受他人的情感，如何建立良好的人际关系。</p>
+</div>
+<div class="xinxi lines3" id="custom_xinxi">
+<h3>基本信息</h3>
+<div class="conBox">
+  <ul>
+    <li>
+      <span class="tm">名称：</span>《爱与恨：情绪心理的智慧》
+    </li>
+    <li>
+      <span class="tm">作者：</span>徐光兴
+    </li>
+    <li>
+      <span class="tm">类别：</span>心理学书籍
+    </li>
+    <li>
+      <span class="tm">价格：</span>24元
+    </li>
+    <li>
+      <span class="tm">语种：</span>汉语
+    </li>
+    <li>
+      <span class="tm">ISBN：</span>9787212040543
+    </li>
+    <li>
+      <span class="tm">出版社：</span>安徽人民出版社
+    </li>
+    <li>
+      <span class="tm">出版时间：</span><a href="http://www.baike.com/wiki/2011%E5%B9%B43%E6%9C%88" target="_blank">2011年3月</a>
+    </li>
+    <li>
+      <span class="tm">装帧：</span>平装
+    </li>
+  </ul>
+</div>
+</div>
+<p class="xinxi-unfold"><label for="xinxi-unfold"></label></p>
+<input type="hidden" name="lieBianAdv" id="lieBianAdv">
+	
+		<div class="baifm-express" id="bkfm" style="display:none;margin-bottom: .18rem;">
+		</div>
+	
+	
+    <div class="gg-vodrecom" style="display:none;">
+    	<h3 class="h3titl" id="3gVideoName"><em class="packup"> </em><em class="btshow"> </em></h3>
+    	<div class="video-showbox" id="videoShowboxId">
+        	<em class="ad-cardmask" id="adCardmask3gid" style="display:none;"></em>
+        	<div id="J_3g_prismPlayer" class="prism-player"></div>
+        	<div class="ad-blockcard" id="3gVideoHeadPic" style="display:none;"><a href="javascript:void(0)" id="3gVideoHeadPicLink"><img src="" alt="" id="3gVideoHeadPicUrl"></a><span class="iclose" id="closeHeadPic"><em id="3gVideoHeadPicTime">10</em> 关闭广告</span></div>
+			<div class="ad-blockcard inster" id="3gVideoMiddlePic" style="display:none;"><a href="javascript:void(0)" id="3gVideoMiddlePicLink"><img src="" alt="" id="3gVideoMiddlePicUrl"><span class="iclose" id="closeMiddlePic">关闭广告</span></a></div>
+    	</div>
+    </div>
+  	
+
+
+
+
+<div class="gg-express" id="ask_answer" style="display:none;">
+	<h3 class="h3titl h3tab">百科问答
+	<strong class="item current" id="toask">我要提问</strong>
+	<strong class="item" id="relanswer">相关问题</strong>
+	<em class="packup"> </em>
+	<em class="btshow" style=""></em>
+	</h3>
+	<div class="ggex-body ggex-askfrom" style="display:;">
+		<label><textarea class="inpt" name="" rows="5" cols="10" placeholder="问题描述，不少于100字"></textarea></label>
+		<div class="btn-area"><button class="btn-blue" type="button">提交</button></div>
+		<div class="gg-ico"><a href=""></a></div>
+	</div>
+	<div class="ggex-body ggex-asklist" style="display:none;height:;">
+		<ul></ul>
+		<em class="btn_allTD2 gray7">查看完整列表</em>
+	</div>
+<!--弹窗-->
+	<em class="fixed_bg" style="display:none;"></em>
+	<div class="ggep-pop" style="display:none;"><p class="tip">您好，回答问题需要您提交下列相关信息，方便我们及时联系您。</p> <ul class="ggep-form"> <li><span class="w24">昵称：</span><label><input type="text" class="inpt" value=""></label></li> <li class="lb-w40"><span class="w24">手机号码：</span><label><input type="text" class="inpt" value=""></label><em class="btn-hui">获取验证码</em></li> <li><span class="w24">输入验证码：</span><label><input type="text" class="inpt" value=""></label></li><li><button class="btn-blue" id="">提交</button></li> </ul>
+	<div class="tips" id="tipToAsk"></div>
+	<i class="iclose"></i> </div>
+	<div class="ggep-dialog" style="display:none;"><div class="pop-hd"><strong>提交成功！</strong></div><p class="gray7">感谢您的提问，我们会通过短信的方式反馈您的问题答案，请注意查收！</p><div class="pop-ft"><button class="btn-blue">确定</button></div></div>
+</div>
+
+
+
+
+<div class="gg-express" id="rel_prd" style="display:none;">
+	<h3 class="h3titl">相关产品
+	<em class="packup"> </em>
+	<em class="btshow" style="">
+	</em></h3>
+	<div class="ggex-body ggex-product">
+	</div>
+	<div class="gg-ico"><a href=""></a></div>
+</div>
+
+
+<div class="gg-express" id="wbuy" style="display:none;">
+	<h3 class="h3titl">百科直通车 <span class="f16">| 求购</span><em class="packup"> </em><em class="btshow" style=""> </em></h3>
+	<div class="ggex-body">
+		 <ul class="ggep-form">
+		    <li><span class="w24">产品品牌：</span><label class="cell-bd"><select id="produtervalue"><option>请选择</option></select></label></li>
+		    <li><span class="w24">型号：</span><label class="cell-bd"><select id="produtertypevalue"><option>请选择</option></select></label></li>
+		    <li><span class="w24">购买类型：</span><label class="cell-bd"><select id="wantBuyType"><option>请选择</option></select></label></li>
+		    <li><span class="w24">所在地：</span><label class="cell-bd"><select id="wantBuyMap"><option>请选择</option></select></label></li>
+		    <li><span class="w24">您的称呼：</span><label><input type="text" id="nickForBuy" class="inpt" value=""></label></li>
+		    <li><span class="w24">联系方式：</span><label><input type="text" id="phoneForBuy" class="inpt" value=""></label></li>
+		 	<li><button class="btn-blue" id="allToBuy">发布求购信息</button></li>
+		 </ul>
+		 <div class="tips" id="tipToBuy" style="display:none;">信息提交成功，商家会尽快安排顾问与您沟通！</div>
+	</div>
+	<!--弹窗-->
+	<em class="fixed_bg" style="display:none;"></em>
+	<div class="gg-ico"><a href=""></a></div>
+</div>
+
+
+<div class="gg-express" id="wjoin" style="display:none;">
+	<h3 class="h3titl">百科直通车 <span class="f16">| 加盟</span><em class="packup"> </em><em class="btshow" style=""> </em></h3>
+    <div class="ggex-body">
+		 <div class="ggex-com"></div>
+		 <ul class="ggep-form">
+		    <li><span class="w24">咨询问题：</span><label class="cell-bd"><select id="myquestion"><option>请选择</option></select></label></li>
+		    <li><span class="w24">您的称呼：</span><label><input type="text" id="nickForJoin" class="inpt" value=""></label></li>
+		    <li><span class="w24">联系方式：</span><label><input type="text" id="phoneForJoin" class="inpt" value=""></label></li>
+		    <li><span class="w24">回访时间：</span><label class="cell-bd"><select id="backTime"><option>请选择</option></select></label></li>
+		 	<li><button class="btn-blue" id="allToJoin">免费咨询</button></li>
+		 </ul>
+		 <div class="tips" id="tipToJoin" style="display:none;">信息提交成功，商家会尽快安排顾问与您沟通！</div>
+	</div>
+<!--弹窗-->
+<em class="fixed_bg" style="display:none;"></em>
+<div id="ggep-ques" class="ggep-actionsheet">
+	<ul class="sheet-list">
+	</ul>
+    <div class="actionsheet_cancel">取消</div>
+</div>
+<div class="gg-ico"><a href=""></a></div>
+</div>
+
+
+<div class="gg-express" id="wcoupon" style="display:none;">
+    <h3 class="h3titl">百科直通车 <span class="f16">| 优惠券</span><em class="packup"> </em><em class="btshow" style=""> </em></h3>
+    <div class="ggex-body ggex-vouchers">
+    	<div class="tab-hd">
+		</div>
+    </div>
+</div>
+
+ 
+
+<div class="gg-express" id="wexperts" style="display:none;">
+    <h3 class="h3titl">百科问答堂 <em class="packup"> </em><em class="btshow" style=""> </em></h3>
+    <div class="ggex-tabcon">
+        <input type="radio" name="ggextag" class="alpha0" id="ggex1-act" checked>
+        <input type="radio" name="ggextag" class="alpha0" id="ggex2-act">
+        <label for="ggex1-act" class="ggex-tag1">专家咨询</label>
+        <label for="ggex2-act" class="ggex-tag2" hidden="hidden">机构介绍</label>
+        <div class="ggex-body ggex-experts">
+        </div>
+        <div class="ggex-body ggex-introduce">
+        </div>
+<!--预约表单弹窗-->
+<div class="ggex-pop ggex-form">
+    <div class="header">
+        <i class="goback"></i>
+        <strong class="title">专家咨询</strong>
+    </div>
+    <ul class="ggep-form">
+        <li><span class="w24"><em class="red">*</em> 姓名：</span><label><input type="text" class="inpt" maxlength="10" placeholder="10个汉字内" value=""></label></li>
+        <li><span class="w24"><em class="red">*</em> 电话：</span><label><input type="text" class="inpt" maxlength="20" placeholder="20个数字内" value=""></label></li>
+        <li><span class="w24"><em class="red">*</em> 时间：</span><label><input type="text" class="inpt" maxlength="20" placeholder="时间格式：2017/09/12" value=""></label></li>
+        <li><span class="w24">备注：</span><label><textarea name="" class="inpt" rows="5" maxlength="50" placeholder="50个汉字内"></textarea></label></li>
+		<li><p class="tips error" hidden="hidden">请认真填写，电话格式错误！</p></li>
+        <li><button class="btn-blue" id="">提交</button></li>
+    </ul>
+</div>
+<!--预约成功弹窗-->
+<div class="share-pop ggex-popwin" id="" style="display:none;">
+    <div class="okinfo">预约成功!</div>
+    <p class="text bold">请等待工作人员与您联系。</p>
+    <i class="iclose"> </i>
+</div>
+    </div>
+</div>
+
+
+<div class="gg-express" id="allonline" style="display:none;">
+	<h3 class="h3titl">热门活动<em class="packup"> </em><em class="btshow" style=""> </em></h3>
+    <div class="ggex-body ggex-activity">
+    </div>
+</div>
+
+
+<div class="gg-express" id="alloffline" style="display:none;">
+	<h3 class="h3titl">热门活动<em class="packup"> </em><em class="btshow" style=""> </em></h3>
+    <div class="ggex-body ggex-activity">
+    </div>
+</div>
+
+
+<div id="hd_ad_doc_107" class="ad_xuanban"> </div>
+<div id="hd_ad_doc_108" class="ad_xuanban"> </div>
+<div class="zhixiao-produce"></div>
+
+
+
+
+	<div class="baikesurvey qiye_info" id="custom_qiyeInfo" style="display:none;">
+	<span class="ico-dangan">企业工商信息<i></i></span>
+	<div class="qy_gs">
+	</div>
+ </div>
+
+  
+
+<div class="single-word-con" id="chain-con" style="display: none;">
+ </div>
+<div class="fixed_bg" id="chain-timeline" style="display: none;" onclick="timeline_close()"></div>
+
+
+<script src="//www.huimg.cn/libs/swiper/4.0.3/js/swiper.min.js"></script>
+
+
+<script>var fodder_photos = new Swiper('.scroll-con',{scrollbar: '.fodder-scrollbar',paginationClickable: true,freeMode: true,scrollbarHide: true,slidesPerView: 'auto',grabCursor: true});</script>
+
+
+<div id="content" style="max-height:1000px;overflow:hidden;position:relative;">
+<span id="1" class="h2_line"><em class="btshow" style="" id="1em"> </em>简介</span><div id="2" style="display:none">作者: 徐光兴 <br>出版: 安徽人民出版社2011-3 <br>装帧: 平装 <br>ISBN: 9787212040543 <br></div>
+<span id="3" class="h2_line" style="display:none"><em class="btshow" style="" id="3em"> </em>作者简介</span><div id="4" style="display:none">徐光兴，国内知名的学校心理咨询与教育辅导专家，儿童自闭症诊断、治疗和教育专家。1989年出国留学，专攻临床心理学、精神分析及心理咨询和诊断技术，获日本教育学博士和美国心理学博士学位。为人学识渊博、多才多艺，阅历丰富。现为华东师范<a class="innerlink" title="大学心理" href="http://www.baike.com/wiki/%E5%A4%A7%E5%AD%A6%E5%BF%83%E7%90%86">大学心理</a>学系教授、博士生导师，华东师范大学心理健康辅导中心主任、国家教育部中小学心理健康教育委员会专家委员、华东地区心理咨询行业机构联谊会会长。在国内外发表论文50余篇，出版各种著作、译著，文艺作品40余部，计800余万字。</div>
+<div id="anchor"></div>
+<div class="load" id="load-more" style="display:none;"><span>点击加载更多</span></div>
+<div class="load" id="loading" style="display:none;"><span>加载中...</span></div>
+
+
+<div class="foot" style="display:none;">
+<a idenattr="KVVEDX0VFBlJUGwNU" isuserlink="1">追梦lcg</a>创建，
+<a idenattr="mZX10agFZZG4AfFlk" isuserlink="1">天天天兰</a>、<a idenattr="nfUACAwQFWkICDgt6" isuserlink="1">寻能</a>、<a idenattr="xRABRCUcEWlxDa1FD" isuserlink="1">wgdu</a>、<a idenattr="KVVEDX0VFBlJUGwNU" isuserlink="1">追梦lcg</a>等参与编辑。
+<br>
+互动百科的词条（含所附图片）系由网友上传，如果涉嫌侵权，请与客服联系，我们将按照法律之相关规定及时进行处理。如需转载，请注明来源于www.baike.com。</div>
+</div>
+<div class="unfold-full" style="display:none">阅读全文</div>
+</div>
+</div>
+<div id="catalogue" class="word_menu" style="display:none;">
+				<h4 class="titl">目录</h4><i class="iclose" onclick="document.getElementById('fbg').style.display='none';document.getElementById('catalogue').style.display='none';canScroll=1;"></i>
+    	<div id="list-catalogue" class="word_menu_ul" style="overflow:hidden;"><ul style="max-height:none;">
+<li class="gg-w650h250" id="hd_ad_doc_106"> </li>
+<li catalogkey="custom_zy"><a href="javascript:void(0)">摘要</a></li>
+<li catalogkey="custom_xinxi"><a href="javascript:void(0)">基本信息</a></li>
+<li catalogkey="custom_qiyeInfo" id="cataQiyeinfo" style="display: none;"><a href="javascript:void(0)">企业工商信息</a></li>
+<li catalogkey="1"><a href="javascript:void(0)">简介</a></li>
+<li catalogkey="3"><a href="javascript:void(0)">作者简介</a></li>
+</ul></div>
+</div>
+<input type="hidden" id="docid" value="400002611931">
+
+<center>
+<div id="hd_ad_doc_82" class="ad_xuanban fixed_btm" style="background: rgb(204, 204, 204); z-index: 10;"></div>
+<div id="hd_ad_doc_111" class="ad_xuanban fixed_btm" style="background: rgb(204, 204, 204); z-index: 10;"></div>
+</center>
+
+	<div id="hd_ad_doc_145"> </div>
+<div id="hd_ad_doc_148"> </div>
+<input type="hidden" name="onlyWay" value="1"><div id="hd_ad_doc_73" class="ad_xuanban"> </div>
+<div id="hd_ad_doc_125" class="ad_xuanban"> </div>
+<footer style="display:none;">
+
+<div class="search">
+  			<form class="search-form" onsubmit="return false;">
+				<input type="text" class="inp_text" value="" id="q_bottom">
+				<input type="button" class="input-button" onclick="var keyword=document.getElementById('q_bottom').value.replace(/^\s*|\s*$/g,'');if(keyword!=''){location='//so.baike.com/m/doc/'+encodeURIComponent(keyword)+'&amp;prd=so_m';}return false;" value="搜索">
+			</form>
+</div>
+
+<div class="search-recom">
+<strong>相关搜索</strong><a href="javascript:void(0);" onclick="innerLinkCategoryDoc('《盗墓笔记》');return false;">《盗墓笔记》</a><a href="javascript:void(0);" onclick="innerLinkCategoryDoc('就书');return false;">就书</a><a href="javascript:void(0);" onclick="innerLinkCategoryDoc('《夫妇乐园》');return false;">《夫妇乐园》</a><a href="javascript:void(0);" onclick="innerLinkCategoryDoc('《金麟岂是池中物》');return false;">《金麟岂是池中物》</a><a href="javascript:void(0);" onclick="innerLinkCategoryDoc('《山海经》');return false;">《山海经》</a><a href="javascript:void(0);" onclick="innerLinkCategoryDoc('《圣经》');return false;">《圣经》</a>
+</div>
+<div id="doc-recom-div" class="doc-recom" style="display:none;">
+<h3 class="h3titl">热门推荐<em class="packup"> </em>
+</h3>
+<div class="doc-recom-con">
+<div id="hd_ad_doc_126" class="item"> </div>
+<div id="hd_ad_doc_74" class="item"> </div>
+<div id="hd_ad_doc_127" class="item"> </div>
+<div id="hd_ad_doc_75" class="item"> </div>
+<div id="hd_ad_doc_128" class="item"> </div>
+<div id="hd_ad_doc_76" class="item"> </div>
+<div id="hd_ad_doc_129" class="item"> </div>
+<div id="hd_ad_doc_77" class="item"> </div>
+<div id="hd_ad_doc_130" class="item"> </div>
+<div id="hd_ad_doc_78" class="item"> </div>
+<div id="hd_ad_doc_79" class="item"> </div>
+</div>
+</div>
+<input type="hidden" id="ad_load_flag" value="0">
+ 
+<div class="full-footer">
+<p><a href="javascript:;" onclick="document.getElementById('fbg').style.display='block';document.getElementById('feadback-con').style.display='block';canScroll=0;" class="blue"><i class="ifeedback"> </i>用户反馈</a></p>
+  <p>© 2018 互动百科版权所有</p>
+</div>
+</footer>
+</div>
+
+<div id="msg_wait" class="pop_msg" style="display:none;">
+		加载中...
+</div>
+<div id="msg_tips" class="pop_msg" style="display:none;margin-left:-110px">
+		抱歉，网络连接有问题<br>请稍后访问！
+</div>
+<style type="text/css">
+/*底部广告样式*/
+#wapDocCookie{background-color:rgba(0,0,0,0.7);background:#4b4b4b\9;width:100%;text-align:center;position:fixed;padding:10px 0 5px 0;bottom:0;left:0;}
+#bkguancha{background:url(//static.hudong.com/35/86/26100000006141138683868789461.png) no-repeat;background-size:280px;background:url(//static.hudong.com/50/69/26100000006141138683695381873.png)  no-repeat 0 -36px\9;height:46px;width:290px;display:inline-block;overflow:hidden;line-height:99em;}
+#closeAd{background:url(//static.hudong.com/54/88/26100000006141138683883031718.png) no-repeat ;background-size:12px;background:url(//static.hudong.com/50/69/26100000006141138683695381873.png)  no-repeat -278px 0\9;height:12px;width:12px;display:block;position:absolute;top:5px;right:10px;}
+</style>
+
+ <div style="display:none;" class="img-view" id="img-view">
+ 	  <div class="black-bg"></div>
+      <div class="header-lv3">
+      <a href="javascript:;" id="img-view-download" class="fr"><i class="btn-down2" onclick="downloadPic()">下载</i></a>
+      <span hidden="hidden" id="img-view-ad" class="fr" style="font-size:12px;color:#fff;padding:1px 5px 2px 5px;margin-top:5px;border:#ddd solid 1px;border-radius:3px;">广告</span>
+        <a href="javascript:void(0)"><i class="jt-l">返回</i>返回词条</a>
+      </div>
+        <div id="imgAlbum" class="pic-slide">
+			<ul>
+			</ul>
+        </div>
+      <div class="bot" style="z-index: 1"><p class="tit"></p>
+      <p class="number f12"></p></div>
+  </div>
+
+  
+
+<div style="display: none; position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; z-index: 11;" class="hui-bg" id="search_autocomplete">
+<div class="isearch">
+  			<form class="search-form" onsubmit="return false;">
+				<input type="text" placeholder="请输入要查询的内容" class="inpt" value="" id="q">
+				<em class="idel" style="display: none;"></em>
+				<input type="button" class="inpb" value="搜索">
+				<a class="iclose">取消</a>
+			</form>
+</div>
+</div>
+
+
+
+
+
+<div class="single-word-con" id="chain-con" style="display: none;">
+ </div>
+<div class="fixed_bg" id="chain-bg" style="display: none;" onclick="document.getElementById('chain-bg').style.display='none';document.getElementById('chain-con').style.display='none';canScroll=1;"></div>
+
+
+
+
+<div class="comment-pop" id="comment-con" style="display: none;">
+  <div class="comment-form">
+    <textarea placeholder="请输入您要评论的内容"></textarea>
+    <em class="no gray9">140字</em>
+    <!--<em class="no red">140字</em>-->
+    <label><input type="checkbox" checked name="to-weibo">发布并转发我的微博</label>
+    <button class="btn-blue" id="publish_comment">发布</button>
+  </div>
+  <i class="iclose" onclick="document.getElementById('fbg').style.display='none';document.getElementById('comment-con').style.display='none';canScroll=1;"></i>
+</div>
+<div class="fixed_bg" id="comment-bg" style="display: none;" onclick="document.getElementById('comment-bg').style.display='none';document.getElementById('comment-con').style.display='none';"></div>
+
+
+
+<div class="share-pop" id="share-con" style="display: none;">
+  <h4 class="share-title">分享词条给好朋友</h4>
+  <div class="ishare" id="ckepop">
+      <em id="share">
+          <a id="weibo" class="jiathis_button_tsina" title="分享到新浪微博" target="_blank"><span class="jiathis_txt jtico jtico_tsina"></span>新浪微博</a>
+          <a id="qzone" class="jiathis_button_qzone" title="分享到QQ空间" target="_blank"><span class="jiathis_txt jtico jtico_qzone"></span>QQ空间</a>
+      	  <a id="weixin" class="jiathis_button_weixin" title="分享到微信" target="_blank"><span class="jiathis_txt jtico jtico_weixin"></span>微信</a>
+      </em>
+   </div>
+  <i class="iclose" onclick="share_close(this)"> </i>
+</div>
+<div class="fixed_bg" id="share-bg" style="display: none;"></div>
+
+
+
+<div class="feadback-pop" id="feadback-con" style="display: none;">
+  <form class="feadback-form">
+    <label><input type="text" placeholder="请填写联系邮箱" id="contact" onpropertychange="countWordsOfContact();" oninput="countWordsOfContact();"></label>
+    <textarea placeholder="互动百科感谢您所提出的宝贵建议，我们非常重视您的建议，并将与您一起建设全球最大的中文百科而努力。" id="feedbackcontent" onpropertychange="countWords();" oninput="countWords();"></textarea>
+    <em class="no gray9" id="countWords">500字</em>
+    <!--<em class="no red">500字</em>-->
+    <button class="btn-blue" onclick="publish();return false;" id="publishBtn" disabled>发布</button>
+  </form>
+
+  <i class="iclose" onclick="document.getElementById('fbg').style.display='none';document.getElementById('feadback-con').style.display='none';canScroll=1;"></i>
+</div>
+<div class="fixed_bg" id="feadback-bg" style="display: none;" onclick="document.getElementById('fbg').style.display='none';document.getElementById('feadback-con').style.display='none';canScroll=1;"></div>
+<div class="tip-pop" id="tip-pop" style="display:none;">
+    <span class="baike-logo"></span>
+    <span id="operTips">系统繁忙!!!</span>
+</div>
+
+
+
+
+<div class="single-word-con" id="chain-con" style="display: none;">
+ </div>
+<div class="fixed_bg" id="chain-bg" style="display: none;" onclick="document.getElementById('chain-bg').style.display='none';document.getElementById('chain-con').style.display='none';"></div>
+
+<input type="hidden" id="titlemd5" value="/CE/6D/CE6D50C84C9FB1D4255B003A8543C312.png?title=%E3%80%8A%E7%88%B1%E4%B8%8E%E6%81%A8%EF%BC%9A%E6%83%85%E7%BB%AA%E5%BF%83%E7%90%86%E7%9A%84%E6%99%BA%E6%85%A7%E3%80%8B">
+
+<div id="share-pop-page2" class="share-pop share-pop-page2" style="display:none;">
+	<div class="ishare">
+		<em>扫码或保存</em>
+		<div id="qrcode"></div>
+		<img src="" width="180" height="180">
+		<p><b>长按上图保存二维码</b>，使用微信扫一扫右上角的"相册"扫码，再分享好友或朋友圈</p>
+	</div>
+	<i class="iclose" onclick="share_close(this)"> </i>
+</div>
+<div id="pop-up-lbs"></div>
+
+
+
+
+
+
+	<div class="pop-kandao" style="display:none;">
+		<div class="kandao-photos swiper-container">
+			<div id="chexun_swiper" class="swiper-wrapper">
+
+
+
+
+				<div class="swiper-slide"><img src="//a2.att.hudong.com/38/19/20300542493935139754199279308.jpg"><p class="photo-alt">宝骏630 2017款 320T 两驱豪华版</p></div>
+				<div class="swiper-slide"><img src="//a4.att.hudong.com/15/78/01300537188696136461788066843.jpg"><p class="photo-alt">宝骏630 2017款 320T 两驱豪华版</p></div>
+				<div class="swiper-slide"><img src="//a0.att.hudong.com/11/07/01300001024098139683076478708.jpg"><p class="photo-alt">宝骏630 2017款 320T 两驱豪华版</p></div>
+				<div class="swiper-slide"><img src="//a4.att.hudong.com/15/78/01300537188696136461788066843_s.jpg"><p class="photo-alt">宝骏630 2017款 320T 两驱豪华版</p></div>
+			</div>
+			<div class="kandao-photos-pagination swiper-pagination"></div>
+		</div>
+		<i class="goback">返回词条</i>
+	</div>
+
+
+	<script src="//www.huimg.cn/libs/swiper/4.0.3/js/swiper.min.js"></script>
+
+	<script>
+
+	</script>
+	
+<div id="hd_ad_doc_122"> </div>
+<div id="hd_ad_doc_123"> </div>
+<div id="hd_ad_doc_124"> </div>
+<input type="hidden" name="doctitle" id="doctitle" value="《爱与恨：情绪心理的智慧》"><input type="hidden" id="cat_lbs" value="书籍,出版,出版业,出版物,图书,心理学,心理学书籍,文化"><input type="hidden" class="open_catgory" value="书籍"><input type="hidden" class="open_catgory" value="出版"><input type="hidden" class="open_catgory" value="出版业"><input type="hidden" class="open_catgory" value="出版物"><input type="hidden" class="open_catgory" value="图书"><input type="hidden" class="open_catgory" value="心理学"><input type="hidden" class="open_catgory" value="心理学书籍"><input type="hidden" class="open_catgory" value="文化">
+	<script type="text/javascript" src="//webapi.amap.com/maps?v=1.3&amp;key=a5393272134125c8a4a8999aa89e8cca&amp;callback=init"></script>
+	<script type="text/javascript">
+		var $$imgAlbum = {};
+		var countImg=0;
+		
+	    			$$imgAlbum["http://a2.att.hudong.com/84/47/20300001255202132229474840853_s.jpg"] = "《爱与恨：情绪心理的智慧》";
+	    		
+	    		countImg++;
+		
+		//$("#albumLength").text(countImg+"张图");
+	</script>
+<script type="text/javascript">
+$('#waptopad').on('click',function(){
+		window.location.href = "//nvvmu.com/wtl/bdorder_lls.ASP#dg";
+	});
+
+</script>
+
+
+<script type="text/javascript">
+function getHdCookie(name) {
+    var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+    if (arr != null) return unescape(arr[2]);
+    return null;
+}
+
+
+function EsLoad (){
+	$.ajaxSetup({cache: true});
+	$.getScript("//www.huimg.cn/e/hd.e.wap.20190724.js",function(){
+		var hudongEXuanbanOptions = {
+		bizType : "xuanban",
+		bizId : $("#hdAdBizId").val(),
+		domain : "www.baike.com",
+		eBlockPrefix : "hd_ad_doc_",
+		eIframePrefix : "hd_ad_doc_iframe_",
+		eLocations : [72, 73, 74, 75, 76, 77, 78, 79, 82, 83, 106, 107, 108, 111, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 145, 147, 148, 149, 150],
+		eConfigs : [{
+					type : "script"
+				}, {
+					type : "script"
+				}, {
+					type : "script"
+				}, {
+					type : "script"
+				}, {
+					type : "script"
+				}, {
+					type : "script"
+				}, {
+					type : "script"
+				},{
+					type : "iframe",
+					width : "100%",
+					height : 90,
+					style : ""
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				},{
+					type : "script"
+				}
+				]
+		};
+		if (typeof(hudongEsTemplate) != "undefined" && typeof(hudongEsTemplate.loadEs) == "function") {
+			hudongEsTemplate.loadEs(hudongEXuanbanOptions);
+		}
+	});
+	$.ajaxSetup({cache: false});
+}
+</script>
+
+
+	<script type="text/javascript" src="//www.huimg.cn/wap/js/userLocation20170906.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/public/js/wapLogin_home_page_20171122.js"></script>
+	
+	<script type="text/javascript" src="//www.huimg.cn/wap/js/interface-20171206.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/wap/js/viewdocnewwap20180111.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/wap/js/tianyan20170505.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/wap/js/certification20180111.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/wap/js/wap_comment20180111.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/wap/js/iscroll.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/wap/js/jquery.scroll.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/wap/js/soundManage-20160908.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/wap/js/alllinkwap20171211.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/wap/js/zhixiao20170828.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/qiyedoc/js/dataFlowPacketForWap20170904.js"></script>
+			 <script type="text/javascript" src="//www.huimg.cn/qiyedoc/js/city-picker.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/wap/js/viewdocnewwapnormal20171025.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/wap/baike-fm/js/wikdocwapfm20171211.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/wap/baike-fm/js/wikdocWapPush.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/cas/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/cas/js/doc_view_history.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/stat/js/hd_product_monitor.js?f=57fc5b1de6563e05ea50c4a1"></script>
+	<script type="text/javascript" src="//stat.baike.com/js/webstat_manage.js"></script>
+	<script type="text/javascript" src="//stat.baike.com/js/webstat_manage_hdga.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/wap/js/autoSaveNote-20171225.js"></script>
+	<script type="text/javascript" src="//www.huimg.cn/wap/js/chexunpicgroup.js"></script>
+
+
+</body>

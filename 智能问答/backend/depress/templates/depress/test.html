@@ -1,0 +1,104 @@
+{% extends 'depress/base.html' %}
+{% load static %}
+
+{% block link %}
+    <link rel="stylesheet" media="screen and (min-device-width: 800px)" href="{% static 'css/pc/test.css' %}">
+    <link rel="stylesheet" media="screen and (max-device-width: 800px)" href="{% static 'css/phone/test.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="test-part">
+        <div class="test-title">{{ test.name }}</div>
+        <div class="test-intro">{{ test.intro }}</div>
+        <form action="/depress/test?tid={{ tid }}" id="submit" method="post" onsubmit="return verifyData()">
+            {% for p in problems %}
+                <div class="problem-part" id="{{ p.pid }}">
+                    <div class="problem-description">
+                        {{ p.nov }}.{{ p.description }}
+                    </div>
+                    {% for c in p.choice %}
+                        <div class="problem-choice {{ forloop.counter0 }}">
+                            <label>
+                                <input type="{% if p.type == 0 %}radio{% elif p.type == 1 %}checkbox{% endif %}" name="{{ p.pid }}" value="{{ forloop.counter0 }}" onclick="auto_move(this)">
+                                <span class="choice-nov"></span>
+                                <span>{{ c }}</span>
+                            </label>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            <div class="submit-part"><input type="submit" value="完成"></div>
+        </form>
+    </div>
+    <div class="show-btn" onclick="showNav()">题卡←</div>
+    <div class="nav-part hide-nav">
+        <label class="hide-btn" onclick="hideNav()">→</label>
+        <div class="nav-tishi">您已完成<span class="finish-nov">?</span>/<span class="all-nov">?</span></div>
+        <div class="nav-nov-part" >
+            {% for p in problems %}
+            <label class="{{ p.pid }}" onclick="to_problem(this)">{{ p.nov }}</label>
+            {% endfor %}
+        </div>
+        <div class="submit-part"><label for="submit"><input type="submit" value="完成" onclick="submit()"></label></div>
+    </div>
+{% endblock %}
+{% block js %}
+    const finish_problem = new Set();
+    var all_problem = parseInt("{{ problem_num }}");
+    document.getElementsByClassName('all-nov')[0].textContent = all_problem;
+    document.getElementsByClassName('finish-nov')[0].textContent = 0;
+
+    function auto_move(e) {
+{#        console.log(e);#}
+        $('html,body').animate({scrollTop:$('#'+e.name).offset().top}, 500);
+        var choices = document.getElementsByName(e.name);
+        var isFinished = false;
+        for(var choice of choices){
+            if(choice.checked){
+                finish_problem.add(e.name);
+                isFinished = true;
+                $('.nav-nov-part .' + e.name).css('backgroundColor', '#a46f48');
+                refreshTishi();
+                break;
+            }
+        }
+        if(!isFinished){
+            finish_problem.delete(e.name);
+            $('.nav-nov-part .' + e.name).css('backgroundColor', 'white');
+            refreshTishi();
+        }
+
+    }
+
+    function to_problem(e) {
+        $('html,body').animate({scrollTop:$('#'+e.className).offset().top - 200}, 500)
+    }
+
+    function refreshTishi() {
+        document.getElementsByClassName('finish-nov')[0].textContent = finish_problem.size;
+    }
+
+    function submit() {
+        $('#submit').submit()
+    }
+
+    function verifyData() {
+        if(finish_problem.size < all_problem){
+            alert('您还有' + (all_problem - finish_problem.size) +'道题没作答，请完成后再提交。');
+            return false;
+        }else{
+            return true;
+        }
+    }
+    function showNav() {
+        $('.nav-part').removeClass('hide-nav');
+        $('.show-btn').css('display', 'none');
+    }
+
+    function hideNav() {
+        $('.nav-part').addClass('hide-nav');
+        $('.show-btn').css('display', 'block');
+    }
+
+
+{% endblock %}

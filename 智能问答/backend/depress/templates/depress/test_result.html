@@ -1,0 +1,106 @@
+{% extends 'depress/test_tem.html' %}
+{% load static %}
+
+{% block link_test %}
+    <link rel="stylesheet" media="screen and (min-device-width: 800px)" href="{% static 'css/pc/test_result.css' %}">
+    <link rel="stylesheet" media="screen and (max-device-width: 800px)" href="{% static 'css/phone/test_result.css' %}">
+    <script src="http://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+{% endblock %}
+
+{% block body_test %}
+<div class="result-body">
+    <div class="score-part">
+        <div class="score-number">您的得分为<span id="score-number">{{ score }}</span>分</div>
+        <div class="score-comment">
+            有{{ same_num }}人次的数据和您在一个水平。{{ comment }}
+            <div id="chart"></div>
+            <div>
+                <a href="/depress/xlpg">←返回</a>
+            </div>
+        </div>
+    </div>
+
+<script>
+
+    var name = '{{ test_name|safe }}';
+    var scores = {{ scores|safe }};
+    var time = scores.length;
+    var time_data = scores.map(d => {
+            return d.time;
+        });
+    var score_data = scores.map(d => {
+            return d.score;
+        });
+
+    var options = {
+        chart: {
+            type: 'line',
+            backgroundColor: 'none',
+            style: {
+                fontSize: 'inherit',
+                color: '#AF701D'
+            }
+        },
+        title: {
+            text: '最近的' + time + '次记录',
+            style: {
+                color: '#AF701D',
+                fontSize: '1.1em'
+            }
+        },
+        xAxis: {
+            title: {
+                text: '时间',
+                style: {
+                    color: '#AF701D'
+                }
+            },
+            labels: {
+                style: {
+                    color: '#AF701D',
+                    fontSize: '0.7em'
+                }
+            },
+            categories: time_data,
+            lineColor: '#AF701D',
+            gridLineColor: '#af9845'
+        },
+        yAxis: {
+            title: {
+                text: '分数',
+                style: {
+                    color: '#AF701D'
+                }
+            },
+            labels: {
+                style: {
+                    color: '#AF701D',
+                    fontSize: '0.7em'
+                }
+            },
+            lineWidth: 1,
+            lineColor: '#AF701D',
+            gridLineColor: '#f2c976',
+            gridLineWidth: 0,
+            allowDecimals: false
+        },
+        tooltip: {
+            style: {
+                color: '#AF701D',
+                fontSize: '0.6em'
+            }
+        },
+        series: [{
+            name: '分数',
+            color: '#AF701D',
+            data: score_data,
+            tooltip: {
+                useHTML: true,
+                headerFormat: '<span style="font-size: 1em;">{point.key}</span><br/>'
+            }
+        }]
+    };
+    var chart = Highcharts.chart('chart', options);
+</script>
+</div>
+{% endblock %}

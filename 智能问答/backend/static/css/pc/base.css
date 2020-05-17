@@ -1,0 +1,76 @@
+
+        body{
+            height: 100vh;
+            background-image: url("../../image/bg.jfif");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        /*{#        菜单部分#}*/
+        .menu-part{
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 60px;
+            width: 100%;
+            min-width: 800px;
+            display: inline;
+            background-color: rgba(225, 214, 214, 0.88);
+            z-index: 5;
+
+        }
+        .menu{
+            font-size: 27px;
+            color: #1a4a4a;
+            top: 10px;
+            padding: 10px;
+            line-height: 60px;
+        }
+        .menu:hover{
+            color: white;
+            transition: ease 0.5s;
+        }
+        .xlpg{
+            padding-left: 78px;
+        }
+        .name{
+            float: right;
+            padding: 0;
+            margin-right:20px;
+        }
+        .menu-part .logo{
+            position: fixed;
+            background-image: url("../../image/timg.jfif");
+            background-size: cover;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            top: 4px;
+            left: 10px;
+
+        }
+        .menu-name-part{
+            position: fixed;
+            top: 60px;
+            right: 20px;
+            width: 140px;
+            height: fit-content;
+            background-color: white;
+            text-align: center;
+            font-size: 19px;
+            cursor: pointer;
+        }
+        .menu-name-part div{
+            padding: 10px;
+        }
+        .hide-name-part {
+            display: none;
+        }
+        .menu-name-part div:hover{
+            background-color: #1a4a4a;
+            color: white;
+        }
+        .menu-name-part label {
+            cursor: pointer;
+        }
+

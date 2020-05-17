@@ -1,0 +1,74 @@
+
+        body{
+            min-height: 100vh;
+        }
+        .main-part{
+            width: 35%;
+            min-width: 600px;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+        .big-title{
+            font-size: 35px;
+            font-weight: bold;
+            padding-top: 150px;
+        }
+        form{
+            margin-top: 50px;
+            position: relative;
+        }
+        input, select{
+            float: right;
+            height: 40px;
+            width: 60%;
+            min-width: 360px;
+            background-color: rgba(255, 255, 245, 0.6);
+            border: 1px #393939 solid;
+            border-radius: 4px;
+            color: rgb(0, 0, 0);
+            margin-bottom: 5px;
+            margin-top: 5px;
+            text-indent: 10px;
+            font-size: 18px;
+            display: block;
+            box-sizing: border-box;
+        }
+
+        .form label{
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            float: left;
+            height: 50px;
+            width: 30%;
+            line-height: 50px;
+            box-sizing: border-box;
+        }
+        .err-message{
+            float: left;
+            width: 100%;
+            margin-bottom: 5px;
+            font-size: 20px;
+            color: red;
+        }
+        .success-message{
+            color: #00ff14;
+        }
+
+        .submit{
+            width: 30%;
+            min-width: 200px;
+            height: 40px;
+            font-size: 20px;
+            transition: ease 0.4s;
+            display: block;
+            margin-right: 35%;
+            margin-top: 30px;
+            border: none;
+            background-color: rgba(225, 214, 214, 0.88);
+        }
+        .submit:hover{
+            background-color: rgba(255, 255, 245, 0.96);
+            color: #464646;
+        }

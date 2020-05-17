@@ -1,0 +1,54 @@
+{% extends 'depress/base.html' %}
+{% load static %}
+
+{% block link %}
+    <link rel="stylesheet" media="screen and (min-device-width: 800px)" href="{% static 'css/pc/test_tem.css' %}">
+    <link rel="stylesheet" media="screen and (max-device-width: 800px)" href="{% static 'css/phone/test_tem.css' %}">
+    {% block link_test %}
+    {% endblock %}
+{% endblock %}
+{% block body %}
+    <div class="body-part">
+        {% block body_test %}
+        {% endblock %}
+        <div class="test-part">
+            <div>
+                {% if recommend_tests_length == 0 %}
+                <div class="test-title">
+                    去<a href="xgzl" style="text-decoration-line: underline; display: inline;">完善资料</a>即可获得智能推荐~
+                </div>
+                {% else %}
+                <div class="test-title">
+                    为你推荐
+                </div>
+                {% endif %}
+                <div class="test-list">
+                    {% for t in recommend_tests %}
+                    <a href="/depress/test?tid={{ t.tid }}">
+                        {{ t.name }}
+                        <span>{{ t.num }}人次已测</span>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div>
+                <div class="test-title">
+                    所有测评
+                </div>
+                <div class="test-list">
+                    {% for t in tests %}
+                    <a href="/depress/test?tid={{ t.tid }}">
+                        {{ t.name }}
+                        <span>{{ t.num }}人次已测</span>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    {% block js_test %}
+    {% endblock %}
+{% endblock %}

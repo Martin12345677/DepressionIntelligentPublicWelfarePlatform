@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抑郁症智能公益平台</title>
+    <style type="text/css">
+        {#        菜单部分#}
+        .menu-part{
+            position: fixed;
+            top: 0;
+            height: 60px;
+            width: 100%;
+            display: inline;
+            background-color: rgb(181, 222, 213);
+            z-index: 5;
+
+        }
+        .menu{
+            font-size: 27px;
+            color: #1a4a4a;
+            top: 10px;
+            padding: 10px;
+            line-height: 60px;
+        }
+        .menu:hover{
+            color: white;
+            transition: ease 0.5s;
+        }
+        .xlpg{
+            padding-left: 78px;
+        }
+        .name{
+            position: fixed;
+            padding: 0;
+            right:20px;
+            top: 0px;
+        }
+        .menu-part .logo{
+            position: fixed;
+            background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582782923763&di=07ee160f2509164aa48483fd57cb99b0&imgtype=0&src=http%3A%2F%2Fwww.17qq.com%2Fimg_qqtouxiang%2F77621341.jpeg");
+            background-size: cover;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            top: 4px;
+            left: 10px;
+        }
+        .menu-name-part{
+            display: none;
+            position: fixed;
+            top: 60px;
+            right: 20px;
+            width: 140px;
+            height: fit-content;
+            background-color: white;
+            text-align: center;
+            font-size: 19px;
+        }
+        .menu-name-part div{
+            padding: 10px;
+        }
+        .menu-name-part div:hover{
+            background-color: #1a4a4a;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-part">
+        <div class="logo"></div>
+        <label class="menu xlpg" onclick="xlpg()">心理评估</label>
+        <label class="menu znwd" onclick="znwd()">智能问答</label>
+        <label class="menu wdsj" onclick="wdsj()">我的世界</label>
+        <label class="menu name" onmouseenter="showMyMenu()">{{ name }}</label>
+        <div class="menu-name-part" onmouseleave="cancelMyMenu()">
+            <div>
+                <label onclick="xgzl()">修改资料</label>
+            </div>
+            <div>
+                <label onclick="aqtc()">安全退出</label>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+    {#    菜单部分#}
+    function xlpg() {
+        window.location.href = '/xlpg'
+    }
+    function znwd() {
+        window.location.href = '/znwd'
+    }
+    function wdsj() {
+        window.location.href = '/wdsj'
+    }
+    function showMyMenu() {
+        var display = document.getElementsByClassName('menu-name-part')[0].style.display;
+        document.getElementsByClassName('menu-name-part')[0].style.display = (display === 'block')? 'none' : 'block';
+    }
+    function cancelMyMenu() {
+        document.getElementsByClassName('menu-name-part')[0].style.display = 'none';
+    }
+    function xgzl() {
+        window.location.href = '/xgzl'
+    }
+    function aqtc() {
+        window.location.href = '/aqtc'
+    }
+</script>
+</html>

@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抑郁症智能公益平台</title>
+    <meta name="view-port" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+    <link rel="stylesheet" media="screen and (min-device-width: 800px)" href="{% static 'css/pc/base.css' %}">
+    <link rel="stylesheet" media="screen and (max-device-width: 800px)" href="{% static 'css/phone/base.css' %}">
+    {% block link %}
+    {% endblock %}
+    <style>
+        {% block css %}
+        {% endblock %}
+    </style>
+</head>
+<body ontouchstart="begin_touch(event)" ontouchmove="touch(event)" ontouchend="end_touch()">
+{#    {% include 'depress/nav.html' %}#}
+    <div class="menu-part">
+        <div class="logo" onclick="showLeft()"></div>
+        <div class="left-menu hide-left">
+            <label class="menu xlpg" onclick="xlpg()">心理评估</label>
+            <label class="menu znwd" onclick="znwd()">智能问答</label>
+            <label class="menu wdsj" onclick="wdsj()">我的世界</label>
+            <label class="menu name" onmouseenter="showMyMenu()" onmouseleave="cancelMyMenu()">{{ name }}，欢迎你</label>
+            <div class="menu-name-part hide-name-part" onmouseenter="showMyMenu()" onmouseleave="cancelMyMenu()">
+                <div onclick="xgzl()">
+                    <label>修改资料</label>
+                </div>
+                <div onclick="aqtc()">
+                    <label>安全退出</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div onclick="hideLeft()" class="child-page">
+    {% block body %}
+    {% endblock %}
+    </div>
+</body>
+
+<script>
+    var beginX = -1;
+    var endX = -1;
+    {#    菜单部分#}
+    function xlpg() {
+        window.location.href = 'xlpg'
+    }
+    function znwd() {
+        window.location.href = 'znwd'
+    }
+    function wdsj() {
+        alert('此功能暂未开放。');
+        return;
+        window.location.href = 'wdsj'
+    }
+    function showMyMenu() {
+        $('.menu-name-part').removeClass('hide-name-part');
+    }
+    function cancelMyMenu() {
+        $('.menu-name-part').addClass('hide-name-part');
+    }
+    function xgzl() {
+        window.location.href = 'xgzl'
+    }
+    function aqtc() {
+        window.location.href = 'aqtc'
+    }
+    function showLeft() {
+        $('.left-menu').removeClass('hide-left');
+{#        $('.child-page').addClass('move-child');#}
+    }
+    function hideLeft() {
+        $('.left-menu').addClass('hide-left');
+{#        $('.child-page').removeClass('move-child');#}
+    }
+    function begin_touch(e) {
+        beginX = e.touches[0].pageX;
+    }
+    function end_touch(e) {
+        beginX = -1;
+    }
+    function touch(e) {
+        if (!beginX) return;
+        endX = e.touches[0].pageX;
+        if (endX - beginX >= 200) {
+            showLeft();
+        }else if (beginX - endX >= 200) {
+            hideLeft();
+        }
+    }
+
+    {% block js %}
+    {% endblock %}
+</script>
+</html>

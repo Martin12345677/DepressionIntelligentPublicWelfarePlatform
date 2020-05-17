@@ -1,0 +1,13 @@
+﻿0：ni 介绍
+1：nt 类型
+2：nc 国籍
+3：no 职业
+4：na 作者
+5：np 价格
+6：nl 语言
+7：nis ISBN
+8：npr 出版社
+9：nu URL
+ng 概念
+npe 人物
+nb 书籍
